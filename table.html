@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5-Day Weather Forecast</title>
+    <link rel="stylesheet" href="table.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="vecteezy_3d-weather-icon-day-with-snow_24825197.png" alt="" width="35px" height="35px">
+                <p>Weather App</p>
+            </div>
+            <div class="menu">
+                <a href="index.html">
+                    <p>DASHBOARD</p>
+                </a>
+                <a href="table.html">
+                    <p>TABLES</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="top-bar">
+                <input type="text" id="cityInput" class="search-bar" placeholder="Enter city name">
+                <button id="fetchForecastBtn" class="btn">Get Forecast</button>
+            </div>
+
+            <div class="filter-buttons">
+                <button id="sortAscBtn" class="btn">Sort Temperature Ascending</button>
+                <button id="sortDescBtn" class="btn">Sort Temperature Descending</button>
+                <button id="filterRainBtn" class="btn">Filter Rainy Days</button>
+                <button id="highestTempBtn" class="btn">Show Highest Temperature</button>
+            </div>
+
+            <table id="forecastTable">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Temperature (°C)</th>
+                        <th>Description</th>
+                        <th>Humidity (%)</th>
+                        <th>Wind Speed (m/s)</th>
+                    </tr>
+                </thead>
+                <tbody id="forecastBody"></tbody>
+            </table>
+
+            <div class="pagination">
+                <button id="prevPageBtn" class="pagination-btn">Previous</button>
+                <span id="pageInfo"></span>
+                <button id="nextPageBtn" class="pagination-btn">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="forecast.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+}
+
+.container {
+    display: flex;
+    height: 100vh; /* Full height of the viewport */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px; /* Fixed width for the sidebar */
+    background-color: #002746;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-right: 2px solid #ccc;
+    color: white;
+    transition: width 0.3s; /* Smooth transition for width changes */
+}
+
+.logo {
+    margin: 30px 0; /* Space above and below logo */
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu {
+    width: 100%;
+}
+
+.menu p {
+    margin: 20px 0;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #226ba3;
+    color: white;
+}
+
+.menu a {
+    text-decoration: none;
+}
+
+/* Main Content Styles */
+.main-content {
+    flex: 1; /* Takes up the remaining space */
+    padding: 20px;
+    overflow-y: auto; /* Allows scrolling if content overflows */
+}
+
+/* Top Bar Styles */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    background-color: #226ba3;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Filter Buttons Styles */
+.filter-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap; /* Allow buttons to wrap on small screens */
+    margin-bottom: 20px; /* Space below filter buttons */
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    color: white;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #226ba3;
+}
+
+/* Pagination Styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pagination-btn {
+    background-color: #226ba3;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.pagination-btn:hover {
+    background-color: #0056b3;
+}
+
+#pageInfo {
+    margin: 0 15px;
+    align-self: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+
+    .container{
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%; /* Reduce sidebar width on smaller screens */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .logo {
+        font-size: 18px; /* Smaller font size for the logo */
+    }
+
+    .menu p {
+        margin: 10px 0; /* Reduce margin for menu items */
+        padding: 8px; /* Adjust padding for smaller screens */
+    }
+
+    .menu p:hover {
+        background-color: #0056b3; /* Change hover color on smaller screens */
+    }
+
+    .main-content {
+        padding: 10px; /* Less padding for main content */
+    }
+
+    .filter-buttons {
+        flex-direction: column; /* Stack buttons vertically on smaller screens */
+        align-items: stretch; /* Stretch buttons to fill the width */
+    }
+
+    .top-bar {
+        flex-direction: column; /* Stack elements vertically on mobile */
+        align-items: stretch; /* Stretch elements */
+    }
+
+    .search-bar {
+        margin-right: 0; /* Remove margin for search bar on smaller screens */
+        margin-bottom: 10px; /* Space below search bar */
+        width: 100%; /* Make search bar full width */
+    }
+
+    .btn {
+        width: 100%; /* Make buttons full width */
+    }
+}
