@@ -135,11 +135,6 @@ body {
     align-items: center;
 }
 
-.City-name,
-.City-temp,
-.City-desc {
-    margin: 10px;
-}
 
 #tempChart {
     width: 100%;
