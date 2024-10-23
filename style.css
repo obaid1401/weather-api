@@ -34,12 +34,16 @@ body {
     background-color: #002746;
     padding-top: 1%;
     border-left: 2px solid #ccc;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.sidebar2 button {
+/* .sidebar2 button {
     margin-left: 20px;
     margin-top: 25px;
-}
+} */
 
 .logo {
     margin-top: 30px;
@@ -94,7 +98,7 @@ body {
 
 .btn {
     height: 40px;
-    width: 100px;
+    width: 9%;
     background-color: #226ba3;
     border: none;
     color: white;
@@ -109,7 +113,9 @@ body {
     border: 2px solid #ccc;
     background-image: url(image.jpeg);
     background-size: cover;
-    margin: auto;
+    /* margin: auto; */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .weather-info {
@@ -120,11 +126,13 @@ body {
     align-items: center;
     flex-direction: column;
     margin-bottom: 20px;
+    gap : 10px;
 }
 
 .charts {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .chart-box {
@@ -145,8 +153,11 @@ body {
     background-color: #f9f9f9;
 }
 
-.chatbot-btn {
+#chatbot-btn {
     cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 70%; */
 }
 
 .chatbot {
@@ -161,7 +172,7 @@ body {
 }
 
 .chatbot-header {
-    background-color: #007bff;
+    background-color: #226ba3;
     color: white;
     padding: 10px;
     text-align: center;
@@ -180,72 +191,117 @@ body {
 }
 
 .chatbot-messages p {
-    margin: 5px 0;
+    /* margin: 5px 0; */
     color: black;
 }
 
 #chatInput {
-    width: calc(100% - 70px);
+    width:71%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
 #sendChatBtn {
-    padding: 10px;
+    /* padding: 10px; */
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
+    background-color: #226ba3;
     color: white;
     cursor: pointer;
+    height:35px;
+    width: 20%;
 }
 
 #sendChatBtn:hover {
     background-color: #0056b3;
 }
 
-/* Responsive Styles */
-@media (max-width: 1200px) {
-    .container {
-        flex-direction: column; /* Stack elements vertically on smaller screens */
-    }
+@media (max-width: 768px) {
+
     .sidebar {
-        width: 100%; /* Full width for sidebar */
-        border-right: none; /* Remove right border on mobile */
+        width: 100%; 
+        border-right: none; 
     }
     .sidebar2 {
-        width: 100%; /* Full width for sidebar2 */
-        border-left: none; /* Remove left border on mobile */
+        width: 100%; 
+        border-left: none; 
     }
     .main-content {
-        width: 100%; /* Full width for main content */
-        padding: 10px; /* Less padding for main content */
+        width: 100%;
+        padding: 10px; 
     }
-    .charts {
-        flex-direction: column; /* Stack charts vertically on smaller screens */
+    .logo {
+        font-size: 18px; 
     }
-    .chart-box {
-        width: 100%; /* Full width for chart boxes */
-        height: 30vh; /* Reduced height for mobile */
-        margin-bottom: 10px; /* Space between chart boxes */
+    .search-bar{
+        width: 85%;
     }
-    .search-bar {
-        width: 100%; /* Full width for search bar */
+    .btn {
+        width: 13%; 
+    }
+    .chatbot {
+        width: 60%;
+    }
+    .logo p{
+        font-size:30px;
+    }
+    .charts{
+        justify-content: center;
+        align-items: center;
+    }
+    .chart-box{
+        width: 80%;
     }
 }
 
-@media (max-width: 768px) {
-    .container{
-        flex-direction: row;
-        flex-wrap: wrap;
+@media (min-width: 786px) and (max-width: 1040px) {
+
+    .sidebar {
+        width: 18%; 
+        border-right: none; 
     }
-    .logo {
-        font-size: 18px; /* Smaller font size for the logo */
+    .sidebar2 {
+        width: 100%; 
+        border-left: none; 
     }
-    .btn {
-        width: 100%; /* Full width for buttons */
+    .main-content {
+        width: 82%;
+        padding: 10px; 
     }
-    .chatbot {
-        width: 90%; /* Make chatbot width responsive */
+
+    .charts{
+        gap: 1%;
+    }
+
+    .chart-box{
+        width: 48%;
     }
 }
+
+@media (min-width: 1040px) and (max-width: 1200px) {
+    .sidebar {
+        width: 16%; 
+        border-right: none; 
+    }
+    .sidebar2 {
+        width: 10%; 
+        border-left: none; 
+    }
+    .main-content {
+        width: 74%;
+        padding: 10px; 
+    }
+    .charts {
+        gap: 10px;
+    }
+    .chart-box {
+        width: 48%; 
+        height: 40vh; 
+        margin-bottom: 10px;
+    }
+    .search-bar {
+        width: 100%;
+    }
+}
+
